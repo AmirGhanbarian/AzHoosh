@@ -12,6 +12,5 @@ sm.rename(index=sm.Name,inplace=True)
 sm.drop(['Name','Company'],axis=1,inplace=True)
 sm=pd.get_dummies(sm)
 scaled_data=scale(sm)
-print (scaled_data)
-
- 
+df_data=pd.DataFrame(sm,index=sm.index,columns=sm.columns)
+print(df_data)
